@@ -355,33 +355,108 @@ body {
     color: #fff;
     text-align: center;
     width: 100%;
+    height: 50vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 30px;
-
+    padding: 20px 0;
 }
 
-.footer-content {
+.footer-contact{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 50%;
 }
 
-.social-icon, .contact-icon {
+.footer-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 50%;
+}
+
+
+.social-icon{
     text-decoration: none;
     color: #fff;
-    font-size: 1.5rem; /* Tamanho base dos ícones */
+    font-size: 3rem; 
     margin: 0 10px;
-    transition: color 0.3s, transform 0.3s; /* Adicionei transição de escala e cor */
+    transition: all 1s; 
+    border: solid 1px white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.social-icon:hover, .contact-icon:hover {
+
+.contact-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 10px;
+    transition: all 1s; 
+}
+
+.social-icon:hover {
     color: #00f4ff;
-    transform: scale(1.5); /* Aumenta o tamanho ao passar o mouse */
+    transition: all 300ms; 
+    border: solid 1px #00f4ff;
+    transform: scale(1.2);
 }
 
+.contact-icon:hover {
+    color: #00f4ff;
+    transition: all 300ms;
+    border-bottom: solid 1px #00f4ff; 
+}
 
+.footer-social .contact-icon:hover {
+    background-color: rgba(0, 244, 255, 0.1); /* Adiciona um efeito de preenchimento */
+}
+
+.footer-profile-picture {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-profile-picture a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: .2rem solid #00f4ff;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.footer-profile-picture .footer-circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-left: .2rem solid #222;
+    border-right: .2rem solid #222;
+    border-top: .2rem solid #00f4ff;
+    border-bottom: .2rem solid #00f4ff;
+    animation: aboutSpiner 5s linear infinite;
+}
 
 
 /*Responsivo*/
@@ -440,7 +515,7 @@ body {
 
 }
 
-
+/*Progress bar*/
 .container{
     position: relative;
     display: flex;
