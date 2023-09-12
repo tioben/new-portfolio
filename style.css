@@ -1,30 +1,32 @@
-
-
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
     background-color: #222;
     display: flex;
+    width: 100vw;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
 
 }
 
 /* Nav bar */
 .navbar {
-    position: fixed; /* Adicione esta linha para tornar a barra de navegação fixa */
-    top: 0; /* Fixe a barra de navegação no topo da janela */
+    position: fixed; 
+    top: 0; 
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+
     width: 100%;
     height: 60px;
-    background-color: #333; /* Adicione um plano de fundo à barra de navegação */
-    z-index: 100; /* Certifique-se de que a barra de navegação fique acima de outros elementos */
+    background-color: #333; 
+    z-index: 100; 
     box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.496);
 }
 
@@ -32,6 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 
 .navbar h1{
@@ -92,15 +95,14 @@ body {
     color: #333;
 }
 
-/* Section1 */
+/* Section1 - Inicio*/
 .intro-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 90px); 
+    height: 100vh; 
     padding-top: 110px; 
-    padding-bottom: 0;
 }
 
 
@@ -167,18 +169,19 @@ body {
 }
 
 
-/*Section2*/
+/*Section2 - Sobre mim*/
 .about-me-section {
     background-color: #333;
     text-align: center;
     color: #fff; 
+
     height: 100vh; 
     width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 110px;
     gap: 50px;
 }
 
@@ -235,14 +238,15 @@ body {
     max-width: 900px;
 }
 
-/*Section3*/
+/*Section3 - Habilidades*/
 .skills-section {
     background-color: #222;
     color: #fff;
     text-align: center;
+
     width: 100%;
     height: 100vh;
-    padding-top: 110px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -287,14 +291,15 @@ body {
     font-size: 1.5rem;
 }
 
-/*Section4*/
+/*Section4 - Projetos*/
 .projects-section {
     text-align: center;
     background-color: #333;
     color: #fff;
+
     width: 100%;
     height: 100vh;
-    padding-top: 110px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -342,10 +347,10 @@ body {
     box-shadow: 0 0 10px #00f4ff;
 }
 
+/*footer - Contatos*/
 .footer {
     background-color: #222;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
     width: 100%;
     display: flex;
@@ -359,8 +364,7 @@ body {
     align-items: center;
 }
 
-.social-icon,
-.contact-icon {
+.social-icon, .contact-icon {
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem; /* Tamanho base dos ícones */
@@ -368,8 +372,7 @@ body {
     transition: color 0.3s, transform 0.3s; /* Adicionei transição de escala e cor */
 }
 
-.social-icon:hover,
-.contact-icon:hover {
+.social-icon:hover, .contact-icon:hover {
     color: #00f4ff;
     transform: scale(1.5); /* Aumenta o tamanho ao passar o mouse */
 }
@@ -381,7 +384,6 @@ body {
 @media screen and (max-width: 870px) {
     .navbar{
         justify-content: space-between;
-        margin-left: 30px;
     }
 
     .nav-list {
@@ -392,7 +394,7 @@ body {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #000;
+        background-color: #333;
     }
 
     .nav-list.active {
