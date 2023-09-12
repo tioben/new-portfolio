@@ -210,7 +210,16 @@ body {
     border-radius: 50%;
     border: .2rem solid #00f4ff;
     object-fit: cover;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 1s ease;
 }
+
+.profile-picture img:hover{
+    transform: scale(1.05);
+}
+
+
 
 .profile-picture .circle-spin{
     position: absolute;
@@ -237,6 +246,71 @@ body {
     font-size: 1rem;
     max-width: 900px;
 }
+
+.btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: #00f4ff;
+    border: .2rem solid #00f4ff;
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: #333;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.btn-box .btn:hover{
+    color: #00f4ff;
+}
+
+
+.btn-box .btn:nth-child(2){
+    background-color: transparent;
+    color: #00f4ff;
+}
+
+.btn-box .btn:nth-child(2):hover{
+    color: #333;
+}
+
+
+.btn-box .btn:nth-child(2)::before{
+    background-color: #00f4ff;
+}
+
+.btn-box .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #333;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn-box .btn:hover::before{
+    width: 100%;
+
+}
+
 
 /*Section3 - Habilidades*/
 .skills-section {
