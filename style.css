@@ -54,7 +54,7 @@ body {
 
 .nav-item {
     margin: 0 20px;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
 }
 
@@ -250,9 +250,10 @@ body {
 .btn-box{
     position: relative;
     display: flex;
-    justify-content: space-between;
-    width: 34.5rem;
+    justify-content: center;
+    width: 50%;
     height: 5rem;
+    gap: 30px;
 }
 
 .btn-box .btn{
@@ -260,8 +261,8 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
-    height: 100%;
+    width: 200px;
+    height: 70px;
     background: #00f4ff;
     border: .2rem solid #00f4ff;
     border-radius: .8rem;
@@ -277,21 +278,6 @@ body {
 
 .btn-box .btn:hover{
     color: #00f4ff;
-}
-
-
-.btn-box .btn:nth-child(2){
-    background-color: transparent;
-    color: #00f4ff;
-}
-
-.btn-box .btn:nth-child(2):hover{
-    color: #333;
-}
-
-
-.btn-box .btn:nth-child(2)::before{
-    background-color: #00f4ff;
 }
 
 .btn-box .btn::before{
