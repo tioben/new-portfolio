@@ -101,7 +101,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh; 
+    min-height: 100vh; 
     padding-top: 110px; 
 }
 
@@ -122,8 +122,8 @@ body {
     flex: 1;
     padding: 20px;
     text-align: center;
-    line-height: 2rem;
-    color: #fff; 
+    line-height: 3rem;
+    color: #fff;
 
 }
 
@@ -154,7 +154,6 @@ body {
     color: #222; 
     font-size: 24px; 
     border-radius: 50%; 
-    padding: 10px; 
     transition: background-color 0.3s ease, box-shadow 0.3s ease; 
     box-shadow: 0 0 5px rgba(255, 255, 255, 0); 
     border-radius: 50%; 
@@ -174,8 +173,9 @@ body {
     background-color: #333;
     text-align: center;
     color: #fff; 
+    padding: 30px;
 
-    height: 100vh; 
+    min-height: 100vh; 
     width: 100%;
 
     display: flex;
@@ -220,8 +220,8 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border-left: .2rem solid #222;
-    border-right: .2rem solid #222;
+    border-left: .2rem solid #333;
+    border-right: .2rem solid #333;
     border-top: .2rem solid #00f4ff;
     border-bottom: .2rem solid #00f4ff;
     animation: aboutSpiner 5s linear infinite;
@@ -243,9 +243,10 @@ body {
     background-color: #222;
     color: #fff;
     text-align: center;
+    padding: 30px;
 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; 
 
     display: flex;
     flex-direction: column;
@@ -296,9 +297,10 @@ body {
     text-align: center;
     background-color: #333;
     color: #fff;
+    padding: 30px;
 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; 
 
     display: flex;
     flex-direction: column;
@@ -356,6 +358,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 30px;
+
 }
 
 .footer-content {
@@ -437,3 +441,133 @@ body {
 }
 
 
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.container .card{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.container .card .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+
+}
+
+.container .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px, 5px);
+}
+
+.container .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    /* 360deg / 100 = 3.6 */
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+
+}
+
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.number h2 span{
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.5em;
+}
+
+.number p{
+    font-weight: 300;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+}
