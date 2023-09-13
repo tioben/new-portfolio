@@ -297,6 +297,31 @@ body {
 
 }
 
+#secaoOculta {
+    display: none; /* Começa oculto */
+    background-color: #222; /* Cor de fundo neon */
+    padding: 20px; /* Espaçamento interno */
+    border: solid 3px #00f4ff;
+    border-radius: 5px; /* Cantos arredondados */
+    margin-top: 20px; /* Espaçamento superior */
+    box-shadow: 0px 0px 20px #00f4ff; /* Sombra neon */
+    color: #00f4ff; /* Cor do texto */
+}
+
+#secaoOculta p {
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 400;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#secaoOculta h1{
+    color: white;
+}
+
 
 /*Section3 - Habilidades*/
 .skills-section {
