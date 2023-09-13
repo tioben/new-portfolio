@@ -93,3 +93,24 @@ function typeText() {
 
 // Chame a função de digitação quando a página estiver totalmente carregada
 window.addEventListener('load', typeText);
+
+// Obtém o elemento do botão e da seção
+const btnSaibaMais = document.getElementById('btnSaibaMais');
+const secaoOculta = document.getElementById('secaoOculta');
+
+// Adiciona um ouvinte de eventos para o clique no botão
+btnSaibaMais.addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+
+    // Verifica se a seção está visível ou oculta
+    if (secaoOculta.style.display === 'none' || !secaoOculta.style.display) {
+        // Se a seção estiver oculta, mostra-a
+        secaoOculta.style.display = 'block';
+        btnSaibaMais.textContent = 'Fechar'; // Altera o texto do botão
+    } else {
+        // Se a seção estiver visível, oculta-a
+        secaoOculta.style.display = 'none';
+        btnSaibaMais.textContent = 'Leia mais'; // Altera o texto do botão de volta
+    }
+});
+
