@@ -110,12 +110,12 @@ body {
     flex: 1;
     text-align: center;
     padding: 15px;
+    cursor: pointer;
 }
 
 .intro-image img {
     width: 450px;
     height: auto;
-    border-radius: 100%;
 }
 
 .intro-message {
@@ -646,7 +646,6 @@ body {
     .intro-image img {
         width: 250px;
         height: auto;
-        border-radius: 100%;
     }
 
 }

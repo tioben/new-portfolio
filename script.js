@@ -138,3 +138,22 @@ btnSaibaMais.addEventListener('click', function(event) {
         btnSaibaMais.textContent = 'Leia mais';
     }
 });
+
+const imagens = [
+    "img/COR-1.png",
+    "img/COR-2.png",
+    "img/COR-3.png",
+    "img/COR-4.png",
+    "img/COR-5.png",
+    "img/COR-6.png"
+  ];
+  
+  let indice = 0;
+  
+  const imagem = document.getElementById("imagem");
+  
+  imagem.addEventListener("click", function () {
+    indice = (indice + 1) % imagens.length;
+    imagem.src = imagens[indice];
+  });
+  
