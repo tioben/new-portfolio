@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 targets: icon,
                 opacity: [0, 1],
                 translateY: [20, 0],
-                duration: 2000, // Aumente a duração para 2 segundos
+                duration: 2000, 
                 easing: 'easeOutExpo',
-                delay: index * 200 // Atraso para animar cada ícone separadamente
+                delay: index * 200 
             });
         });
     }
@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
             anime({
                 targets: text,
                 opacity: [0, 1],
-                translateX: [-300, 0], // De -300px para a esquerda para 0px
-                duration: 2000, // Aumente a duração para 2 segundos
+                translateX: [-300, 0], 
+                duration: 2000, 
                 easing: 'easeOutExpo',
-                delay: index * 200 // Atraso para animar cada texto separadamente
+                delay: index * 200 
             });
         });
     }
@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         anime({
             targets: photo,
             opacity: [0, 1],
-            translateX: [300, 0], // De 300px para a direita para 0px
-            duration: 2000, // Aumente a duração para 2 segundos
+            translateX: [300, 0], 
+            duration: 2000,
             easing: 'easeOutExpo'
         });
     }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('load', animatePhoto);
 });
 
-// Função para simular a digitação do texto no elemento h2 em um loop infinito
+// Função para simular a digitação 
 function typeText() {
     const h2 = document.getElementById("typing-text");
     const text = "DESENVOLVEDOR FRONT-END";
@@ -125,6 +125,7 @@ function fadeOut(element) {
     }, 50);
 }
 
+// Efeito de abrir e fechar aba no botao saiba mais
 const btnSaibaMais = document.getElementById('btnSaibaMais');
 
 btnSaibaMais.addEventListener('click', function(event) {
@@ -139,6 +140,7 @@ btnSaibaMais.addEventListener('click', function(event) {
     }
 });
 
+// Efeito ao clicar na imagem principal
 const imagens = [
     "img/COR-1.png",
     "img/COR-2.png",
